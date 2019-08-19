@@ -3,6 +3,8 @@ Mini tienda en donde se podrá dar de alta una venta y se podrá generar un repo
 
 ## Requerimientos
  * PHP >= 7.2
+ * Node >= 10
+ * YARN >= 1.17
  * Mariadb >= 10.3.15
  * Composer >= 1.8.6
 
@@ -13,7 +15,9 @@ Extensiones  de PHP(que están instaladas y habilitadas en la mayoría de las in
     // Directorio donde se quiere instalar
     $ git clone https://github.com/themike123/gtifac2
     $ cd mini-shop
-    $ composer install	
+    $ composer install
+    $ yarn install
+    $ npm install
 
 ## Cofiguración necesaria
 
