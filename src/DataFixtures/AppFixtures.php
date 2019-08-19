@@ -38,7 +38,7 @@ class AppFixtures extends Fixture
         $user->setEmail('themike123work@gmail.com');
         $manager->persist($user);        
 
-        //Se creo el usuario supervisor
+        //Se creo el usuario admin
         $user = new User(); 
         $user->setUsername('admin');
         $user->setPassword(
