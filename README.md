@@ -18,6 +18,7 @@ Extensiones  de PHP(que están instaladas y habilitadas en la mayoría de las in
     $ composer install
     $ yarn install
     $ npm install
+    $ yarn encore dev
 
 ## Cofiguración necesaria
 
