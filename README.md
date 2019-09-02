@@ -13,7 +13,7 @@ Extensiones  de PHP(que están instaladas y habilitadas en la mayoría de las in
 
 ## Instalación
     // Directorio donde se quiere instalar
-    $ git clone https://github.com/themike123/gtifac2
+    $ git clone https://github.com/themike123/mini-shop
     $ cd mini-shop
     $ composer install
     $ yarn install
