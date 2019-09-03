@@ -10,3 +10,19 @@ require('../css/main.scss');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');
+
+
+/*$( ".delete" ).on( "click", function() {
+
+    var formData = new FormData()
+    formData.append('_token', $('#token').val());    
+
+    $.ajax({
+        url: $('#acction_delete').val(),
+        type: 'DELETE',
+        data: formData.serialize(),
+        success: function(response) {
+          //...
+        }
+     });
+  });*/
