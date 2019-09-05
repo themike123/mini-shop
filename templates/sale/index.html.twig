@@ -3,15 +3,15 @@
 {% block title %}Sale index{% endblock %}
 
 {% block body %}
-    <h1>Sale index</h1>
+    <h1>Ventas</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Date</th>
+                <th>Fecha</th>
                 <th>Total</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -19,10 +19,9 @@
             <tr>
                 <td>{{ sale.id }}</td>
                 <td>{{ sale.date ? sale.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ sale.total }}</td>
+                <td>${{ sale.total }}</td>
                 <td>
-                    <a href="{{ path('sale_show', {'id': sale.id}) }}">show</a>
-                    <a href="{{ path('sale_edit', {'id': sale.id}) }}">edit</a>
+                    <a href="{{ path('sale_show', {'id': sale.id}) }}" class="btn btn-info">Detalles</a>                    
                 </td>
             </tr>
         {% else %}
@@ -32,6 +31,6 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('sale_new') }}">Create new</a>
+    <br><br>
+    <a href="{{ path('sale_new') }}" class="btn btn-primary">Realizar Compra</a>
 {% endblock %}

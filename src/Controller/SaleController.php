@@ -29,8 +29,10 @@ class SaleController extends AbstractController
      * @Route("/new", name="sale_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
-    {
+    {                
         $sale = new Sale();
+        $sale->setUser($this->getUser());
+
         $form = $this->createForm(SaleType::class, $sale);
         $form->handleRequest($request);
 

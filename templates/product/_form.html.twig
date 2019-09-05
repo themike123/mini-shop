@@ -1,4 +1,26 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_start(form, {'attr' : { 'id': 'form_product'} }) }}
+    <!-- form_row incluye label,errores,help y input/textarea/hidden/etc -->
+    <div class="form-group">    
+        {{ form_row(form.name) }}
+    </div>
+
+    <div class="form-group">    
+        {{ form_row(form.description) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.price) }}            
+        {{ form_widget(form.price) }}
+        {% if  form_errors(form.price) %}
+            <span style="color:red;"> <strong>Precio no permitido</strong></span>
+        {% endif %}
+        <small>{{ form_help(form.price) }}</small>        
+    </div>
+
+    <div class="form-group">    
+        {{ form_row(form.stock) }}        
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
 {{ form_end(form) }}

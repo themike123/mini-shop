@@ -7,6 +7,10 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class SaleType extends AbstractType
 {
@@ -14,10 +18,13 @@ class SaleType extends AbstractType
     {
         $builder
             ->add('date')
-            ->add('total')
-            ->add('User')
-            //->add('User', EntityType::class['class','App\Entity\User'])
             ->add('Product')
+            ->add('total', NumberType::class,[                
+                'label' => 'Total',
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
         ;
     }
 

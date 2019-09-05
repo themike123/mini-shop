@@ -3,9 +3,12 @@
 {% block title %}New Product{% endblock %}
 
 {% block body %}
+
+    <a href="{{ path('product_index') }}" class="btn btn-info">Regresar</a>    
+    <br><br>
+
     <h1>Nuevo Producto</h1>
 
-    {{ include('product/_form.html.twig') }}
+    {{ include('product/_form.html.twig') }}    
 
-    <a href="{{ path('product_index') }}">Regresar</a>
 {% endblock %}

@@ -18,7 +18,7 @@ class ProductController extends AbstractController
     /**
      * @Route("/", name="product_index", methods={"GET"})
      */
-    public function index(ProductRepository $productRepository): Response
+    public function index(ProductRepository $productRepository, Request $request): Response
     {
         return $this->render('product/index.html.twig', [
             'products' => $productRepository->findAll(),
@@ -29,7 +29,7 @@ class ProductController extends AbstractController
      * @Route("/new", name="product_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
-    {
+    {        
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
